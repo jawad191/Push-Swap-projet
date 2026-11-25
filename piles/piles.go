@@ -60,8 +60,8 @@ func (p *Piles) IsSorted() bool {
 	return true
 }
 
-// Sa swaps the first two elements of A.
-func (p *Piles) Sa() {
+// sa swaps the first two elements of A.
+func (p *Piles) sa() {
 	if len(p.A) < 2 {
 		return
 	}
@@ -70,8 +70,8 @@ func (p *Piles) Sa() {
 	p.Operations = append(p.Operations, "sa")
 }
 
-// Sb swaps the first two elements of B.
-func (p *Piles) Sb() {
+// sb swaps the first two elements of B.
+func (p *Piles) sb() {
 	if len(p.B) < 2 {
 		return
 	}
@@ -80,8 +80,8 @@ func (p *Piles) Sb() {
 	p.Operations = append(p.Operations, "sb")
 }
 
-// Ss swaps the first two elements of both stacks.
-func (p *Piles) Ss() {
+// ss swaps the first two elements of both stacks.
+func (p *Piles) ss() {
 	if len(p.A) < 2 && len(p.B) < 2 {
 		return
 	}
@@ -97,8 +97,8 @@ func (p *Piles) Ss() {
 	p.Operations = append(p.Operations, "ss")
 }
 
-// Pa pushes the first element of B onto A.
-func (p *Piles) Pa() {
+// pa pushes the first element of B onto A.
+func (p *Piles) pa() {
 	if len(p.B) == 0 {
 		return
 	}
@@ -109,8 +109,8 @@ func (p *Piles) Pa() {
 	p.Operations = append(p.Operations, "pa")
 }
 
-// Pb pushes the first element of A onto B.
-func (p *Piles) Pb() {
+// pb pushes the first element of A onto B.
+func (p *Piles) pb() {
 	if len(p.A) == 0 {
 		return
 	}
@@ -121,8 +121,8 @@ func (p *Piles) Pb() {
 	p.Operations = append(p.Operations, "pb")
 }
 
-// Ra rotates A upwards.
-func (p *Piles) Ra() {
+// ra rotates A upwards.
+func (p *Piles) ra() {
 	if len(p.A) < 2 {
 		return
 	}
@@ -131,8 +131,8 @@ func (p *Piles) Ra() {
 	p.Operations = append(p.Operations, "ra")
 }
 
-// Rb rotates B upwards.
-func (p *Piles) Rb() {
+// rb rotates B upwards.
+func (p *Piles) rb() {
 	if len(p.B) < 2 {
 		return
 	}
@@ -141,8 +141,8 @@ func (p *Piles) Rb() {
 	p.Operations = append(p.Operations, "rb")
 }
 
-// Rr rotates both stacks upwards.
-func (p *Piles) Rr() {
+// rr rotates both stacks upwards.
+func (p *Piles) rr() {
 	if len(p.A) < 2 && len(p.B) < 2 {
 		return
 	}
@@ -158,8 +158,8 @@ func (p *Piles) Rr() {
 	p.Operations = append(p.Operations, "rr")
 }
 
-// Rra rotates A downwards.
-func (p *Piles) Rra() {
+// rra rotates A downwards.
+func (p *Piles) rra() {
 	if len(p.A) < 2 {
 		return
 	}
@@ -170,8 +170,8 @@ func (p *Piles) Rra() {
 	p.Operations = append(p.Operations, "rra")
 }
 
-// Rrb rotates B downwards.
-func (p *Piles) Rrb() {
+// rrb rotates B downwards.
+func (p *Piles) rrb() {
 	if len(p.B) < 2 {
 		return
 	}
@@ -182,8 +182,8 @@ func (p *Piles) Rrb() {
 	p.Operations = append(p.Operations, "rrb")
 }
 
-// Rrr rotates both stacks downwards.
-func (p *Piles) Rrr() {
+// rrr rotates both stacks downwards.
+func (p *Piles) rrr() {
 	if len(p.A) < 2 && len(p.B) < 2 {
 		return
 	}
